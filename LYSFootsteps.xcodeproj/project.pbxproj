@@ -13,6 +13,7 @@
 		0D228E271F20715F00DAB014 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D228E251F20715F00DAB014 /* Main.storyboard */; };
 		0D228E291F20715F00DAB014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D228E281F20715F00DAB014 /* Assets.xcassets */; };
 		0D228E2C1F20715F00DAB014 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D228E2A1F20715F00DAB014 /* LaunchScreen.storyboard */; };
+		9EE7F423C6062562C0994949 /* Pods_LYSFootsteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532EEE91096FA6DC42C3BC9C /* Pods_LYSFootsteps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		0D228E281F20715F00DAB014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D228E2B1F20715F00DAB014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D228E2D1F20715F00DAB014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		532EEE91096FA6DC42C3BC9C /* Pods_LYSFootsteps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYSFootsteps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCAC837CCDB73F3386644BF /* Pods-LYSFootsteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYSFootsteps.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYSFootsteps/Pods-LYSFootsteps.release.xcconfig"; sourceTree = "<group>"; };
+		D89AF49BDE5EA0F7BB022836 /* Pods-LYSFootsteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYSFootsteps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYSFootsteps/Pods-LYSFootsteps.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE7F423C6062562C0994949 /* Pods_LYSFootsteps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				0D228E1B1F20715F00DAB014 /* LYSFootsteps */,
 				0D228E1A1F20715F00DAB014 /* Products */,
+				50E24B124B6852B529AD4A4D /* Pods */,
+				2AC91650986AE4AC397248BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2AC91650986AE4AC397248BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				532EEE91096FA6DC42C3BC9C /* Pods_LYSFootsteps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50E24B124B6852B529AD4A4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D89AF49BDE5EA0F7BB022836 /* Pods-LYSFootsteps.debug.xcconfig */,
+				7DCAC837CCDB73F3386644BF /* Pods-LYSFootsteps.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D228E301F20715F00DAB014 /* Build configuration list for PBXNativeTarget "LYSFootsteps" */;
 			buildPhases = (
+				98C8DFE02211D45B931AEFA7 /* [CP] Check Pods Manifest.lock */,
 				0D228E151F20715F00DAB014 /* Sources */,
 				0D228E161F20715F00DAB014 /* Frameworks */,
 				0D228E171F20715F00DAB014 /* Resources */,
+				2550D54CF755EFC02BFF9F59 /* [CP] Embed Pods Frameworks */,
+				251267374C0F47A6DD75B6A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		251267374C0F47A6DD75B6A1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYSFootsteps/Pods-LYSFootsteps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2550D54CF755EFC02BFF9F59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYSFootsteps/Pods-LYSFootsteps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98C8DFE02211D45B931AEFA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0D228E151F20715F00DAB014 /* Sources */ = {
@@ -269,6 +344,7 @@
 		};
 		0D228E311F20715F00DAB014 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D89AF49BDE5EA0F7BB022836 /* Pods-LYSFootsteps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K6D5KQ7QKW;
@@ -281,6 +357,7 @@
 		};
 		0D228E321F20715F00DAB014 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DCAC837CCDB73F3386644BF /* Pods-LYSFootsteps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K6D5KQ7QKW;

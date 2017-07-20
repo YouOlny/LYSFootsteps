@@ -1,0 +1,6 @@
+framework module Pods_LYSFootsteps {
+  umbrella header "Pods-LYSFootsteps-umbrella.h"
+
+  export *
+  module * { export * }
+}
