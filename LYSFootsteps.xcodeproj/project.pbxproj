@@ -387,6 +387,7 @@
 				0D228E321F20715F00DAB014 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

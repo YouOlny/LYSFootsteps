@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "Masonry.h"
-
+#import <SDWebImage/UIImageView+WebCache.h>
 
 
 
@@ -27,9 +27,9 @@
     
     [self.view addSubview:self.mainTableView];
     
-//    [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make){
-//        make.<#left#>.mas_equalTo(<#offset#>);
-//    }];
+    [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make){
+        make.left.top.right.bottom.mas_equalTo(0);
+    }];
     
     
 }
@@ -43,15 +43,28 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return 80;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     static NSString *identify = @"cellIdentify";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+    
     if (!cell) {
+        
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identify];
+        
     }
+    
+//    http://5.supfree.net/images/d3.gif
+//    
+//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://5.supfree.net/images/u%d.gif",(int)indexPath.row]]];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%d",(int)indexPath.row];
+    
+    
     return cell;
 }
 
