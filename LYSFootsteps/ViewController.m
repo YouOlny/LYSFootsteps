@@ -25,11 +25,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self.view addSubview:self.mainTableView];
-    
-    [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make){
-        make.left.top.right.bottom.mas_equalTo(0);
-    }];
+//    [self.view addSubview:self.mainTableView];
+//    
+//    [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make){
+//        make.left.top.right.bottom.mas_equalTo(0);
+//    }];
     
     
 }
@@ -61,6 +61,30 @@
 //    http://5.supfree.net/images/d3.gif
 //    
 //    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://5.supfree.net/images/u%d.gif",(int)indexPath.row]]];
+    
+    
+    NSString * picName = @"high";// [NSString stringWithFormat:@"m%d",(int)indexPath.row];
+    
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://5.supfree.net/images/%@.gif",picName]]
+                             completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+                                
+                                 
+                                 NSString *path_document = NSHomeDirectory();
+                                 
+                                 //设置一个图片的存储路径
+                                 
+                                 NSString *imagePath = [path_document stringByAppendingString:[NSString stringWithFormat:@"/Documents/%@.png",picName]];
+                                 
+                                 NSLog(@"%@",imagePath);
+                                 //把图片直接保存到指定的路径（同时应该把图片的路径imagePath存起来，下次就可以直接用来取）
+                                 
+                                 [UIImagePNGRepresentation(image) writeToFile:imagePath atomically:YES];
+                                 
+                                 
+                                 
+                             }];
+    
+    
     
     cell.textLabel.text = [NSString stringWithFormat:@"%d",(int)indexPath.row];
     

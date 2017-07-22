@@ -13,6 +13,7 @@
 		0D228E271F20715F00DAB014 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D228E251F20715F00DAB014 /* Main.storyboard */; };
 		0D228E291F20715F00DAB014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D228E281F20715F00DAB014 /* Assets.xcassets */; };
 		0D228E2C1F20715F00DAB014 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D228E2A1F20715F00DAB014 /* LaunchScreen.storyboard */; };
+		0D9DEA251F22FBB700E033E8 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D9DEA241F22FBB700E033E8 /* Property List.plist */; };
 		9EE7F423C6062562C0994949 /* Pods_LYSFootsteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532EEE91096FA6DC42C3BC9C /* Pods_LYSFootsteps.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		0D228E281F20715F00DAB014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D228E2B1F20715F00DAB014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D228E2D1F20715F00DAB014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D9DEA241F22FBB700E033E8 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		532EEE91096FA6DC42C3BC9C /* Pods_LYSFootsteps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYSFootsteps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCAC837CCDB73F3386644BF /* Pods-LYSFootsteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYSFootsteps.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYSFootsteps/Pods-LYSFootsteps.release.xcconfig"; sourceTree = "<group>"; };
 		D89AF49BDE5EA0F7BB022836 /* Pods-LYSFootsteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYSFootsteps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYSFootsteps/Pods-LYSFootsteps.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				0D228E201F20715F00DAB014 /* AppDelegate.m */,
 				0D228E221F20715F00DAB014 /* ViewController.h */,
 				0D228E231F20715F00DAB014 /* ViewController.m */,
+				0D9DEA241F22FBB700E033E8 /* Property List.plist */,
 				0D228E251F20715F00DAB014 /* Main.storyboard */,
 				0D228E281F20715F00DAB014 /* Assets.xcassets */,
 				0D228E2A1F20715F00DAB014 /* LaunchScreen.storyboard */,
@@ -167,6 +170,7 @@
 			files = (
 				0D228E2C1F20715F00DAB014 /* LaunchScreen.storyboard in Resources */,
 				0D228E291F20715F00DAB014 /* Assets.xcassets in Resources */,
+				0D9DEA251F22FBB700E033E8 /* Property List.plist in Resources */,
 				0D228E271F20715F00DAB014 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
