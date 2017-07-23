@@ -7,15 +7,19 @@
 //
 
 #import "ViewController.h"
-#import "Masonry.h"
+//#import "Masonry.h"
+#import <Masonry/Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <LYSRepo/UIView+LYSAliquots.h>
 
+#import "InfoView.h"
+#import "KeyView.h"
 
+@interface ViewController ()
 
-@interface ViewController () <UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) InfoView *bodyView;/**< <#String#> */
+@property (nonatomic, strong) KeyView *keyView;/**< <#String#> */
 
-@property (nonatomic, strong) UITableView *mainTableView;/**< <#String#> */
-@property (nonatomic, strong) NSMutableArray *mainTableArray;/**< <#String#> */
 
 @end
 
@@ -24,101 +28,67 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
     
-//    [self.view addSubview:self.mainTableView];
-//    
-//    [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make){
-//        make.left.top.right.bottom.mas_equalTo(0);
-//    }];
+    [self initUI];
     
     
 }
 
 
 
-#pragma tableView--delegate
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+- (void)initUI {
+
+    [self.view lys_AddAliquotsViews:@[self.bodyView,self.keyView]
+                          LRpadding:5
+                        viewPadding:5
+                          direction:LYSAliquotDirection_H];
+    
+    
+//    [self.view addSubview:self.bodyView];
+//    [self.view addSubview:self.keyView];
+    
+    [self makeConstraints];
+    
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 80;
+- (void)makeConstraints {
+    
+    
+    
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)initData {
     
-    static NSString *identify = @"cellIdentify";
+}
+
+
+
+
+
+- (InfoView *)bodyView {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
-    
-    if (!cell) {
-        
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identify];
-        
+    if(!_bodyView){
+        _bodyView = [[InfoView alloc]init];
+        _bodyView.backgroundColor = [UIColor greenColor];
     }
-    
-//    http://5.supfree.net/images/d3.gif
-//    
-//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://5.supfree.net/images/u%d.gif",(int)indexPath.row]]];
-    
-    
-    NSString * picName = @"high";// [NSString stringWithFormat:@"m%d",(int)indexPath.row];
-    
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://5.supfree.net/images/%@.gif",picName]]
-                             completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-                                
-                                 
-                                 NSString *path_document = NSHomeDirectory();
-                                 
-                                 //设置一个图片的存储路径
-                                 
-                                 NSString *imagePath = [path_document stringByAppendingString:[NSString stringWithFormat:@"/Documents/%@.png",picName]];
-                                 
-                                 NSLog(@"%@",imagePath);
-                                 //把图片直接保存到指定的路径（同时应该把图片的路径imagePath存起来，下次就可以直接用来取）
-                                 
-                                 [UIImagePNGRepresentation(image) writeToFile:imagePath atomically:YES];
-                                 
-                                 
-                                 
-                             }];
-    
-    
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%d",(int)indexPath.row];
-    
-    
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    return _bodyView;
     
 }
 
-#pragma tableView
-- (UITableView *)mainTableView {
-    if (!_mainTableView) {
-        _mainTableView = [[UITableView alloc]init];
-        _mainTableView.delegate = self;
-        _mainTableView.dataSource = self;
+- (KeyView *)keyView {
+    
+    if(!_keyView){
+        _keyView = [[KeyView alloc]init];
+        _keyView.backgroundColor = [UIColor greenColor];
     }
-    return _mainTableView;
-}
-
-- (NSMutableArray *)mainTableArray {
-    if (!_mainTableArray) {
-        _mainTableArray = [[NSMutableArray alloc]init];
-    }
-    return _mainTableArray;
+    return _keyView;
+    
 }
 
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

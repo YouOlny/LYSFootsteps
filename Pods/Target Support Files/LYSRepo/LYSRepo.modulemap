@@ -1,0 +1,6 @@
+framework module LYSRepo {
+  umbrella header "LYSRepo-umbrella.h"
+
+  export *
+  module * { export * }
+}

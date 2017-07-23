@@ -1,4 +1,14 @@
 PODS:
+  - LYSRepo (0.2.2):
+    - LYSRepo/LYSAliquots (= 0.2.2)
+    - LYSRepo/LYSBuoy (= 0.2.2)
+    - LYSRepo/LYSSystemTimeLabel (= 0.2.2)
+    - LYSRepo/LYSTextfield (= 0.2.2)
+  - LYSRepo/LYSAliquots (0.2.2):
+    - Masonry (~> 1.0.2)
+  - LYSRepo/LYSBuoy (0.2.2)
+  - LYSRepo/LYSSystemTimeLabel (0.2.2)
+  - LYSRepo/LYSTextfield (0.2.2)
   - Masonry (1.0.2)
   - ReactiveCocoa (6.0.0-rc.1):
     - ReactiveSwift (= 2.0.0-rc.1)
@@ -10,17 +20,19 @@ PODS:
   - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
+  - LYSRepo
   - Masonry
   - ReactiveCocoa (~> 6.0.0-rc.1)
   - SDWebImage
 
 SPEC CHECKSUMS:
+  LYSRepo: d5bab9a97ede9de463407dcca22bcaa49fe04be5
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   ReactiveCocoa: ab8a0f094012983d477f37ce69919df6e87b4e64
   ReactiveSwift: 9b5e51e9a0ff763aacb32911136c2df047cb3307
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: f6632d4c2f9d1d45e6b8eda477e618441fd03e4d
+PODFILE CHECKSUM: 041aded962ae6a985ea5ed04423a12753b134ab7
 
 COCOAPODS: 1.2.1
