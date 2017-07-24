@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) NSMutableArray *mainArray;/**< <#String#> */
 
+@property (nonatomic, strong) NSMutableArray *keyboardArray;/**< <#String#> */
+
 @property (nonatomic, strong) InfoView *bodyView;/**< <#String#> */
 @property (nonatomic, strong) KeyView *keyView;/**< <#String#> */
 
@@ -33,13 +35,16 @@
     // Do any additional setup after loading the view, typically from a nib.
 
     
-    [self.mainArray addObjectsFromArray:[ViewController tempData]];
+    [self.mainArray addObjectsFromArray:[self tempData]];
+    
+    
+    
     
     
     [self initUI];
     
 
-    
+    [self.keyView changeData:self.keyboardArray];
 }
 
 - (void)refreshInfoView {
@@ -66,7 +71,7 @@
     
 }
 
-+ (NSArray *)tempData {
+- (NSArray *)tempData {
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"File" ofType:@"json"];
     NSData *jsonData = [[NSData alloc] initWithContentsOfFile:path];
@@ -88,6 +93,24 @@
             [array addObject:model];
         }
         
+        
+        
+        {
+            NSArray * dataArr = jsonObj[@"key"];
+            
+            NSMutableArray * array = [NSMutableArray array];
+            
+            for (NSDictionary * dic in dataArr) {
+                
+                InfoModel * model = [InfoModel mj_objectWithKeyValues:dic];
+                model.parent = @"high";
+                [array addObject:model];
+            }
+            
+            [self.keyboardArray addObjectsFromArray:array];
+            
+        }
+        
         return array;
     }
     
@@ -104,7 +127,7 @@
 
 - (void)initUI {
 
-    [self.view lys_AddAliquotsViews:@[self.bodyView,self.keyView]
+    [self.view lys_AddAliquotsViews:@[self.keyView,self.bodyView]
                           LRpadding:5
                         viewPadding:5
                           direction:LYSAliquotDirection_H];
@@ -163,6 +186,14 @@
 }
 
 
+- (NSMutableArray *)keyboardArray {
+    
+    if(!_keyboardArray){
+        _keyboardArray = [[NSMutableArray alloc]init];
+    }
+    return _keyboardArray;
+    
+}
 
 
 @end

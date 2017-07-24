@@ -10,4 +10,8 @@
 
 @interface KeyView : UIView
 
+
+- (void)changeData:(NSMutableArray *)keyboardArray ;
+
+
 @end
