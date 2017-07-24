@@ -28,8 +28,10 @@
     
     NSMutableArray * keyBtnArray = [NSMutableArray array];
     
-    for (int index = 0; index < 7; index++) {
+    for (int index = 1; index < 8; index++) {
         UIButton * btn = [[UIButton alloc]init];
+        
+        btn.tag = index;
         
         [btn setTitle:@"qwe" forState:UIControlStateNormal];
         

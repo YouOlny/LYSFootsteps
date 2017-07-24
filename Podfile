@@ -18,6 +18,7 @@ target 'LYSFootsteps' do
     
 	pod 'ReactiveCocoa', '~> 6.0.0-rc.1'
 
+ pod 'MJExtension', '~> 3.0.13'
 
 
 end

@@ -8,10 +8,15 @@
 
 #import "InfoView.h"
 
+
+
 #import <LYSRepo/UIView+LYSAliquots.h>
 
 
 @interface InfoView ()
+
+
+@property (nonatomic, strong) InfoModel *infoModel;/**< <#String#> */
 
 @property (nonatomic, strong) UIView *noteView;/**< 音符 */
 
@@ -29,6 +34,24 @@
 
 
 @implementation InfoView
+
+
+
+- (void)infoViewModel:(InfoModel *)model {
+    
+    self.infoModel = model;
+    
+    self.leftImageView.image = [UIImage imageNamed:self.infoModel.parent];
+    self.rightImageView.image = [UIImage imageNamed:self.infoModel.icon];
+    
+    //todo:<MrLYS> 正确率
+    
+    
+    
+}
+
+
+
 
 - (instancetype)init
 {
@@ -127,7 +150,7 @@
     if(!_rightNumLabel){
         _rightNumLabel = [[UILabel alloc]init];
         _rightNumLabel.numberOfLines = 0;
-        _rightNumLabel.text = @"正确率\n100%";
+        _rightNumLabel.text = @"123123\n10";
     }
     return _rightNumLabel;
     
@@ -138,7 +161,7 @@
     if(!_rightRateLabel){
         _rightRateLabel = [[UILabel alloc]init];
         _rightRateLabel.numberOfLines = 0;
-        _rightRateLabel.text = @"正确率\n100%";
+        _rightRateLabel.text = @"1231\n100%";
     }
     return _rightRateLabel;
     
@@ -150,7 +173,7 @@
     if(!_errorLabel){
         _errorLabel = [[UILabel alloc]init];
         _errorLabel.numberOfLines = 0;
-        _errorLabel.text = @"正确率\n100%";
+        _errorLabel.text = @"12312\n5";
     }
     return _errorLabel;
     

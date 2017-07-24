@@ -11,11 +11,14 @@
 #import <Masonry/Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <LYSRepo/UIView+LYSAliquots.h>
+#import <MJExtension/MJExtension.h>
 
 #import "InfoView.h"
 #import "KeyView.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) NSMutableArray *mainArray;/**< <#String#> */
 
 @property (nonatomic, strong) InfoView *bodyView;/**< <#String#> */
 @property (nonatomic, strong) KeyView *keyView;/**< <#String#> */
@@ -30,11 +33,72 @@
     // Do any additional setup after loading the view, typically from a nib.
 
     
+    [self.mainArray addObjectsFromArray:[ViewController tempData]];
+    
+    
     [self initUI];
+    
+
+    
+}
+
+- (void)refreshInfoView {
+    
+//    InfoModel * model = [[InfoModel alloc]init];
+    
+//    int leftIndex = arc4random() % 2 ;
+    
+//    if (leftIndex % 2) {
+//        model.leftImageStr = @"high";
+//    }else {
+//        model.leftImageStr = @"low";
+//    }
+    
+//    NSArray * array = [ViewController tempData];
+    
+    
+    int index = arc4random()% self.mainArray.count;
+    
+    [self.bodyView infoViewModel:self.mainArray[index]];
+    
+    
     
     
 }
 
++ (NSArray *)tempData {
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"File" ofType:@"json"];
+    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:path];
+    NSError *error;
+    id jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+    if (!jsonData || error) {
+        //DLog(@"JSON解码失败");
+        return nil;
+    } else {
+        
+        NSArray * dataArr = jsonObj[@"high"];
+        
+        NSMutableArray * array = [NSMutableArray array];
+        
+        for (NSDictionary * dic in dataArr) {
+            
+            InfoModel * model = [InfoModel mj_objectWithKeyValues:dic];
+            model.parent = @"high";
+            [array addObject:model];
+        }
+        
+        return array;
+    }
+    
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self refreshInfoView];
+    
+}
 
 
 
@@ -87,6 +151,16 @@
     
 }
 
+
+
+- (NSMutableArray *)mainArray {
+    
+    if(!_mainArray){
+        _mainArray = [[NSMutableArray alloc]init];
+    }
+    return _mainArray;
+    
+}
 
 
 
