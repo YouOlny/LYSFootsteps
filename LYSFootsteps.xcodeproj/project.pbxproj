@@ -20,6 +20,9 @@
 		0DCD84131F247FC800290E0C /* KeyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCD84121F247FC800290E0C /* KeyModel.m */; };
 		0DCD84161F24813700290E0C /* InfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCD84151F24813700290E0C /* InfoModel.m */; };
 		0DCD84181F24837C00290E0C /* File.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DCD84171F24837C00290E0C /* File.json */; };
+		0DF3A0681F650E0B00A162E6 /* ExpalinTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF3A0671F650E0B00A162E6 /* ExpalinTableVC.m */; };
+		0DF3A0731F650EC800A162E6 /* UITableViewCell+LYSBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF3A0721F650EC800A162E6 /* UITableViewCell+LYSBase.m */; };
+		0DF3A0791F65107E00A162E6 /* FootstepsExplainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF3A0781F65107E00A162E6 /* FootstepsExplainCell.m */; };
 		9EE7F423C6062562C0994949 /* Pods_LYSFootsteps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532EEE91096FA6DC42C3BC9C /* Pods_LYSFootsteps.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,12 @@
 		0DCD84141F24813700290E0C /* InfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoModel.h; sourceTree = "<group>"; };
 		0DCD84151F24813700290E0C /* InfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoModel.m; sourceTree = "<group>"; };
 		0DCD84171F24837C00290E0C /* File.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = File.json; sourceTree = "<group>"; };
+		0DF3A0661F650E0B00A162E6 /* ExpalinTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpalinTableVC.h; sourceTree = "<group>"; };
+		0DF3A0671F650E0B00A162E6 /* ExpalinTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpalinTableVC.m; sourceTree = "<group>"; };
+		0DF3A0711F650EC800A162E6 /* UITableViewCell+LYSBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+LYSBase.h"; sourceTree = "<group>"; };
+		0DF3A0721F650EC800A162E6 /* UITableViewCell+LYSBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+LYSBase.m"; sourceTree = "<group>"; };
+		0DF3A0771F65107E00A162E6 /* FootstepsExplainCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootstepsExplainCell.h; sourceTree = "<group>"; };
+		0DF3A0781F65107E00A162E6 /* FootstepsExplainCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootstepsExplainCell.m; sourceTree = "<group>"; };
 		532EEE91096FA6DC42C3BC9C /* Pods_LYSFootsteps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYSFootsteps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCAC837CCDB73F3386644BF /* Pods-LYSFootsteps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYSFootsteps.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYSFootsteps/Pods-LYSFootsteps.release.xcconfig"; sourceTree = "<group>"; };
 		D89AF49BDE5EA0F7BB022836 /* Pods-LYSFootsteps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYSFootsteps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYSFootsteps/Pods-LYSFootsteps.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +96,8 @@
 				0D228E201F20715F00DAB014 /* AppDelegate.m */,
 				0D228E221F20715F00DAB014 /* ViewController.h */,
 				0D228E231F20715F00DAB014 /* ViewController.m */,
+				0DF3A06F1F650EAC00A162E6 /* LYSBase */,
+				0D7A55BB1F650D690093F161 /* FSExplainTableVC */,
 				0DCD84141F24813700290E0C /* InfoModel.h */,
 				0DCD84151F24813700290E0C /* InfoModel.m */,
 				0D9DEA261F24184F00E033E8 /* InfoView.h */,
@@ -113,6 +124,42 @@
 				0D228E1D1F20715F00DAB014 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0D7A55BB1F650D690093F161 /* FSExplainTableVC */ = {
+			isa = PBXGroup;
+			children = (
+				0DF3A0761F65106800A162E6 /* Views */,
+				0DF3A0661F650E0B00A162E6 /* ExpalinTableVC.h */,
+				0DF3A0671F650E0B00A162E6 /* ExpalinTableVC.m */,
+			);
+			path = FSExplainTableVC;
+			sourceTree = "<group>";
+		};
+		0DF3A06F1F650EAC00A162E6 /* LYSBase */ = {
+			isa = PBXGroup;
+			children = (
+				0DF3A0701F650EC800A162E6 /* UITableViewCell */,
+			);
+			path = LYSBase;
+			sourceTree = "<group>";
+		};
+		0DF3A0701F650EC800A162E6 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0DF3A0711F650EC800A162E6 /* UITableViewCell+LYSBase.h */,
+				0DF3A0721F650EC800A162E6 /* UITableViewCell+LYSBase.m */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		0DF3A0761F65106800A162E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0DF3A0771F65107E00A162E6 /* FootstepsExplainCell.h */,
+				0DF3A0781F65107E00A162E6 /* FootstepsExplainCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		2AC91650986AE4AC397248BB /* Frameworks */ = {
@@ -261,8 +308,11 @@
 				0D9DEA2E1F2424F000E033E8 /* KeyView.m in Sources */,
 				0D9DEA281F24184F00E033E8 /* InfoView.m in Sources */,
 				0D228E241F20715F00DAB014 /* ViewController.m in Sources */,
+				0DF3A0791F65107E00A162E6 /* FootstepsExplainCell.m in Sources */,
 				0DCD84161F24813700290E0C /* InfoModel.m in Sources */,
+				0DF3A0731F650EC800A162E6 /* UITableViewCell+LYSBase.m in Sources */,
 				0D228E211F20715F00DAB014 /* AppDelegate.m in Sources */,
+				0DF3A0681F650E0B00A162E6 /* ExpalinTableVC.m in Sources */,
 				0D228E1E1F20715F00DAB014 /* main.m in Sources */,
 				0DCD84131F247FC800290E0C /* KeyModel.m in Sources */,
 			);
